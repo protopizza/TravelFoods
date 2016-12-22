@@ -22,10 +22,10 @@ class Restaurant(object):
 
     @staticmethod
     def getCsvHeader():
-        return ",".join(COLUMNS_ORDER)
+        return ",".join(COLUMNS_ORDER) + "\n"
 
     def toCsvLine(self):
         ordered_fields = []
         for column in COLUMNS_ORDER:
             ordered_fields.append(str(self.fields[column]))
-        return ",".join(ordered_fields)
+        return ",".join(ordered_fields) + "\n"
